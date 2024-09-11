@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Календарь с событиями</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="calendar">
+
+    <div class="calendar_header">
+        <button class="btn prev-month">
+            <img class="btn prev" src="/img/right-arrow-svgrepo-com.svg" alt="">
+        </button>
+        <div id="month-year"></div>
+        <button class="btn next-month">
+            <img class="btn next" src="/img/right-arrow-svgrepo-com.svg" alt="">
+
+        </button>
+    </div>
+   <div class="calendar_month">
+    <div>MON</div>
+    <div>TUE</div>
+    <div>WED</div>
+    <div>THU</div>
+    <div>FRI</div>
+    <div>SAT</div>
+    <div>SUN</div>
+   </div>
+    <div class="calendar-days"></div>
+  </div>
+  <div id="event-details">
+    <h2>Event for <span id="selected-date"></span></h2>
+    <ul id="event-list"></ul>
+    <textarea id="new-event" placeholder="Add new event..."></textarea>
+    <button id="add-event">ADD EVENT</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
