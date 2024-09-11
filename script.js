@@ -16,17 +16,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentDate = new Date();
   const events = {};
+
   
 
   function renderCalendar() {
     const daysContainer = document.querySelector(".calendar-days");
     const monthYear = document.querySelector("#month-year");
     const eventDetails = document.querySelector("#event-details");
-
+    const headerCalendar = document.querySelector('.calendar_header');
+    const caletndarMonth = document.querySelector('.calendar_month');
     daysContainer.innerHTML = "";
 
     const currentMonth = currentDate.getMonth();
     const currentYear = currentDate.getFullYear();
+
+    headerCalendar.classList.remove('winter', 'autumn', 'spring', 'summer');
+    caletndarMonth.classList.remove('autumn_monts', 'winter_monts', 'spring_monts', 'summer_monts')
+
+    if (currentMonth === 11 || currentMonth === 0 || currentMonth === 1) {
+      headerCalendar.classList.add('winter');
+      caletndarMonth.classList.add('winter_monts')
+
+
+    } else if(currentMonth === 8 || currentMonth === 9 || currentMonth === 10){
+      headerCalendar.classList.add('autumn')
+      caletndarMonth.classList.add('autumn_monts')
+
+    }else if(currentMonth === 2 || currentMonth === 3 || currentMonth === 4){
+      headerCalendar.classList.add('spring')
+      caletndarMonth.classList.add('spring_monts')
+
+    }else{
+      headerCalendar.classList.add('summer')
+      caletndarMonth.classList.add('summer_monts')
+
+
+    };
 
     // Обновление текста с месяцем и годом
     monthYear.textContent = `${monthName[currentMonth]} ${currentYear}`;

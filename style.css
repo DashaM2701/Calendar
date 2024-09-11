@@ -15,6 +15,7 @@ background-color: rgb(236, 202, 148) ;
   box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
 }
 .calendar_header {
+  height: 100px;
 position: relative;
   background: radial-gradient(circle, #50c878, #007a7a);
   padding: 30px 10px 10px 10px;
@@ -61,11 +62,12 @@ position: relative;
 }
 
 .calendar-days div:hover {
-  background-color: #8aecb0;
+  filter:contrast(1.2);
+  transform: scale(1.03);
 }
 
 .day.current-day {
-  background-color: #06aa87;
+  background-color: #fcc0b8;
   font-weight: bold;
 }
 .btn {
@@ -76,9 +78,15 @@ position: relative;
   width: 30px;
   cursor: pointer;
 }
-.prev {
-  transform: rotate(180deg);
+.btn:hover{
+transform: scale(1.2);
+transition: all .2s ease-in-out;
 }
+#month-year{
+  font-size: 30px;
+
+}
+
 
 #event-details {
   display: none;
@@ -138,4 +146,38 @@ button.remove-event:hover {
 }
 .other-month-day {
   opacity: 0.5;
+}
+.autumn{
+  background-image: url(/img/autum.jpg);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.winter{
+  background-image: url(/img/winter.jpg);
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+.winter_monts{
+color: rgb(63, 52, 209);
+}
+.autumn_monts{
+  color:rgb(180, 131, 40);
+}
+.spring{
+  background-image: url(/img/spring.jpg);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.spring_monts{
+  color: #17e054;
+}
+.summer{
+  background-image: url(/img/summer.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.summer_monts{
+  color: #dbdf13;
 }
